@@ -1,0 +1,26 @@
+{
+  "name": "react-select-animate",
+  "version": "1.0.0",
+  "description": "A simple react select implementation with cool animation effects.",
+  "main": "index.js",
+  "scripts": {
+    "build": "jsx index.jsx > index.js",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lckmalhotra/react-select-animate.git"
+  },
+  "keywords": [
+    "react-select"
+  ],
+  "author": "Anurag Malhotra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lckmalhotra/react-select-animate/issues"
+  },
+  "homepage": "https://github.com/lckmalhotra/react-select-animate#readme",
+  "devDependencies": {
+    "react-tools": "^0.13.3"
+  }
+}

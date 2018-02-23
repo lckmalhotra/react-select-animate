@@ -1,0 +1,36 @@
+.react-select-animate{
+  display: block;
+  position: relative;
+  color: #d2d2d2;
+
+  &__input{
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+
+  &__list{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.2);
+    li{
+      display: block;
+      &:hover{
+        background: rgba(0,0,0,0.2);
+      }
+    }
+  }
+
+  .show-list{
+    visibility: visible;
+  }
+
+  .hide-list{
+    visibility: hidden;
+  }
+}

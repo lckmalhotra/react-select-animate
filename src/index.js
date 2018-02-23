@@ -1,5 +1,4 @@
-const React = require('react');
-const {Component} = require('react');
+import React, {Component} from "react";
 
 class ReactSelectAnimate extends Component {
 
@@ -9,17 +8,13 @@ class ReactSelectAnimate extends Component {
         this.state = {
             toggle: false
         };
-
-        this.handleClick.bind(this);
-        this.toggleButtonClick.bind(this);
-        this.handleOutsideClick.bind(this);
     }
 
-    handleClick(e, value) {
+    handleClick = (e, value) => {
         this.props.onSelection(value);
     };
 
-    toggleButtonClick() {
+    toggleButtonClick = () => {
         if (!this.state.toggle) {
             // attach/remove event handler
             document.addEventListener('click', this.handleOutsideClick, false);
@@ -29,7 +24,7 @@ class ReactSelectAnimate extends Component {
         this.setState({toggle: !this.state.toggle});
     };
 
-    handleOutsideClick(e) {
+    handleOutsideClick = (e) => {
         if (this.node.contains(e.target)) {
             return;
         }
@@ -47,10 +42,9 @@ class ReactSelectAnimate extends Component {
         const {title} = value;
 
         return (
-            <div
-                className={`react-select-animate ${effect}`}
-                ref={node => { this.node = node; }}
-                onClick={this.toggleButtonClick}>
+            <div className={`react-select-animate ${effect}`} ref={node => {
+                this.node = node;
+            }} onClick={this.toggleButtonClick}>
 
                 <input
                     type="text"
@@ -58,10 +52,12 @@ class ReactSelectAnimate extends Component {
                     placeholder={placeholder}
                     value={title}
                     readOnly={true}
-                    onChange={() => {}}
+                    onChange={() => {
+                    }}
                     autoComplete="off"/>
 
-                <div className={this.state.toggle ? "react-select-animate__list show-elem" : "react-select-animate__list hide-elem"}>
+                <div
+                    className={this.state.toggle ? "react-select-animate__list show-list" : "react-select-animate__list hide-list"}>
                     <ul>
                         {
                             dataList ? dataList.map((item, i) => <li onClick={(e) => this.handleClick(e, item)} key={i}>
@@ -74,4 +70,4 @@ class ReactSelectAnimate extends Component {
     }
 }
 
-module.exports.ReactSelectAnimate = ReactSelectAnimate;
+export default ReactSelectAnimate;

@@ -47,18 +47,20 @@ class ReactSelectAnimate extends Component {
         const {title} = value;
 
         return (
-            <div className={`react-select-animate ${effect}`} ref={node => {
-                this.node = node;
-            }} onClick={this.toggleButtonClick}>
+            <div
+                className={`react-select-animate ${effect}`}
+                ref={node => { this.node = node; }}
+                onClick={this.toggleButtonClick}>
+
                 <input
                     type="text"
                     className="react-select-animate__input"
                     placeholder={placeholder}
                     value={title}
                     readOnly={true}
-                    onChange={() => {
-                    }}
+                    onChange={() => {}}
                     autoComplete="off"/>
+
                 <div className={this.state.toggle ? "react-select-animate__list show-elem" : "react-select-animate__list hide-elem"}>
                     <ul>
                         {

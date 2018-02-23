@@ -1,7 +1,6 @@
 const React = require('react');
 const {Component} = require('react');
 
-
 class ReactSelectAnimate extends Component {
 
     constructor(props) {
@@ -39,22 +38,30 @@ class ReactSelectAnimate extends Component {
 
     render() {
 
-        const {dataList, placeholder, value} = this.props;
+        const {
+            dataList,
+            placeholder,
+            value,
+            effect
+        } = this.props;
         const {title} = value;
 
         return (
-            React.createElement("div", {className: "", ref: node => {
-                this.node = node;
-            }, onClick: this.toggleButtonClick}, 
+            React.createElement("div", {
+                className: `react-select-animate ${effect}`, 
+                ref: node => { this.node = node; }, 
+                onClick: this.toggleButtonClick}, 
+
                 React.createElement("input", {
                     type: "text", 
+                    className: "react-select-animate__input", 
                     placeholder: placeholder, 
                     value: title, 
                     readOnly: true, 
-                    onChange: () => {
-                    }, 
+                    onChange: () => {}, 
                     autoComplete: "off"}), 
-                React.createElement("div", {className: this.state.toggle ? "show-elem" : "hide-elem"}, 
+
+                React.createElement("div", {className: this.state.toggle ? "react-select-animate__list show-elem" : "react-select-animate__list hide-elem"}, 
                     React.createElement("ul", null, 
                         
                             dataList ? dataList.map((item, i) => React.createElement("li", {onClick: (e) => this.handleClick(e, item), key: i}, 

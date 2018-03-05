@@ -11,7 +11,7 @@ class ReactSelectAnimate extends Component {
     }
 
     handleClick = (e, value) => {
-        this.props.onSelection(value);
+        this.props.onChange(value);
     };
 
     toggleButtonClick = () => {
@@ -34,7 +34,7 @@ class ReactSelectAnimate extends Component {
     render() {
 
         const {
-            dataList,
+            options,
             placeholder,
             value,
             effect
@@ -60,7 +60,7 @@ class ReactSelectAnimate extends Component {
                     className={this.state.toggle ? "react-select-animate__list show-list" : "react-select-animate__list hide-list"}>
                     <ul>
                         {
-                            dataList ? dataList.map((item, i) => <li onClick={(e) => this.handleClick(e, item)} key={i}>
+                            options ? options.map((item, i) => <li onClick={(e) => this.handleClick(e, item)} key={i}>
                                 <span>{item.title}</span></li>) : false
                         }
                     </ul>

@@ -1,24 +1,49 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: #d2d2d2;
+  font-family: Arial; }
+
 .react-select-animate {
   display: block;
   position: relative;
   color: #d2d2d2; }
   .react-select-animate__input {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     font-size: 14px;
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.2); }
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none !important; }
   .react-select-animate__list {
     display: block;
+    width: 100%;
     position: absolute;
-    bottom: 0;
+    top: 48px;
     left: 0;
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.2); }
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0;
+    box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.2);
+    z-index: 10; }
     .react-select-animate__list li {
       display: block; }
-      .react-select-animate__list li:hover {
-        background: rgba(0, 0, 0, 0.2); }
+      .react-select-animate__list li span {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        cursor: pointer;
+        color: #000;
+        text-transform: capitalize; }
+        .react-select-animate__list li span:hover {
+          background: #009ec3;
+          color: #fff;
+          box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.2); }
   .react-select-animate .show-list {
     visibility: visible; }
   .react-select-animate .hide-list {

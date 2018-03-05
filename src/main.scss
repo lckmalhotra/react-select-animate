@@ -1,3 +1,14 @@
+*{
+  box-sizing:border-box;
+  padding : 0;
+  margin : 0;
+}
+
+body{
+  background : #d2d2d2;
+  font-family: Arial;
+}
+
 .react-select-animate{
   display: block;
   position: relative;
@@ -5,23 +16,40 @@
 
   &__input{
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     font-size: 14px;
     background: #fff;
+    color:#000;
     border: 1px solid rgba(0,0,0,0.2);
+    outline: none!important;
   }
 
   &__list{
     display: block;
+    width:100%;
     position: absolute;
-    bottom: 0;
+    top: 48px;
     left: 0;
     background: #fff;
     border: 1px solid rgba(0,0,0,0.2);
+    padding:0;
+    box-shadow: 0 3px 18px -4px rgba(0,0,0,.2);
+    z-index: 10;
     li{
       display: block;
-      &:hover{
-        background: rgba(0,0,0,0.2);
+      span{
+        display:block;
+        padding: 15px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        transition: all 0.3s;
+        cursor:pointer;
+        color:#000;
+        text-transform:capitalize;
+        &:hover{
+          background: #009ec3;
+          color:#fff;
+          box-shadow: 0 3px 18px -4px rgba(0,0,0,.2);
+        }
       }
     }
   }

@@ -1,2 +1,25 @@
 .react-select-animate {
-  background: red; }
+  display: block;
+  position: relative;
+  color: #d2d2d2; }
+  .react-select-animate__input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2); }
+  .react-select-animate__list {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2); }
+    .react-select-animate__list li {
+      display: block; }
+      .react-select-animate__list li:hover {
+        background: rgba(0, 0, 0, 0.2); }
+  .react-select-animate .show-list {
+    visibility: visible; }
+  .react-select-animate .hide-list {
+    visibility: hidden; }

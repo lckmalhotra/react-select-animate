@@ -57,7 +57,7 @@ class ReactSelectAnimate extends Component {
             React.createElement(
                 'div',
                 {
-                    className: this.state.toggle ? "react-select-animate__list show-elem" : "react-select-animate__list hide-elem" },
+                    className: this.state.toggle ? "react-select-animate__list show-list" : "react-select-animate__list hide-list" },
                 React.createElement(
                     'ul',
                     null,

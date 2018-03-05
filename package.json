@@ -1,6 +1,6 @@
 {
   "name": "react-select-animate",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple react select implementation with cool animation effects.",
   "main": "dist/index.js",
   "scripts": {
@@ -29,6 +29,8 @@
     "react-tools": "^0.13.3"
   },
   "dependencies": {
-    "babel-plugin-transform-react-jsx": "^6.24.1"
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   }
 }
